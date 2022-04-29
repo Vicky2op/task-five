@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- linking bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <!-- linking local css -->
+    <link href="/Templates/style.css" rel="stylesheet">
+    <!-- Amazon icon for tittle -->
+    <link
+    href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAA5vX/AP///wDK6f8AAKf/AIaGhAAdHRwAE63/AGZmZQB2dnYAVlZUAJWVlACf2v8ABQUDAPL6/wC75P8Ay+r/AJSUkwDZ2dkAAKj/AObm5gAeHhwAMjIwAFZWVQDz8/MABQUEAKKiogCQ1f8AAKf+AHLJ/wBVVVQA8vLyAK3f/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAgICAgICAgICAgIAAAACAgIbBAQEEwQEAgICAgACAg4EExACAgICIBwHDAICAg8dAgICAgICAgICAgIBAgICAgICCg0FAgIXAgIDAgICAgICGRkZDRkWDRkCAgICAgICERkZBgIZDRkZAgICAgICAggNGQICAhkZFwICAgICAgIfDRkaAgIZDRcCAgICAgICAhkZGRkKGRkeAgICAgICAgICFBkZGRkZFwICAgICAgICGBECAgIZGRcCAgICAgICAhkZCQISGQ0RAgICAgICAgIVGRkZGRkNAgICAgIAAgICAgsNGRkNAgICAgIAAAACAgICAgICAgICAgIAAMADAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAMADAAA="
+    rel="icon" type="image/x-icon" />
+    <title>Add Product - Amazon</title>
+
+</head>
+<body>
+  <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ps-5">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img src="../images/logo.png" alt="AmazonLogo" width="131px" height="40px"  />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/"> Home </a>
+              </li>
+              <li class="nav-item ps-3 pe-3 active">
+                <a class="nav-link" href="/"> Products </a>
+              </li>
+              <li class="nav-item me-5">
+                <a class="nav-link" href="/featured"> Featured </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+          <div class="addThisProd text-center pt-3">
+            <p class="fs-2 fw-bolder">Add New Product</p>
+          </div>
+          
+          <form action="/form" method="post">
+            <div class="ImageAndUpload " >
+              <div class="imageHereComes mb-3 mt-5" width="">
+
+                <img id="imageHere" src="" alt="" height="400px">
+              </div>
+              <div class="addImgDiv text-center mb-3 mt-5" style="min-width: 49%;" onclick="document.getElementById('productImg').click()">
+                <div id="buttonImg"  onclick="defaultBtnActive()">
+                  <div id="centreThisDiv">
+                    <img src="/images/image.svg" alt="" id="addImgImg" width="50px">
+                    <p style="margin-bottom: 0px;">+Add product images</p>
+                    <p>or drop images here</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="mb-3">
+                  <input class="form-control d-none" name="productImg" type="file" id="productImg" accept="image/*" multiple=""/>
+                </div>
+                <input type="text" name="imageUrl" id="imageUrl" class="d-none">
+        
+                <div class="vital">
+                    
+                    <div class="container boxHead"><p class="fs-4">Vital Info</p> </div>
+          <div class="row mb-3">
+              <label for="prodID" class="col-sm-2 col-form-label col-form-label-sm fw-600 fs-6" >Product Id :</label>
+              <div class="col-sm-10"><input required type="text" class="form-control" name="prodID" id="prodID" placeholder="Enter product id" /></div>
+            </div>
+            <div class="row mb-3">
+                <label for="prodName" class="col-sm-2 col-form-label col-form-label-sm fw-600 fs-6">Product Name :</label>
+                <div class="col-sm-10"><input  required type="text" class="form-control" name="prodName" id="prodName" placeholder="Enter Product Name" /></div>
+          </div>
+          <div class="row mb-3">
+              <label for="brandName" class="col-sm-2 col-form-label col-form-label-sm fw-600 fs-6">Brand Name :</label>
+            <div class="col-sm-10"><input required type="text" class="form-control" name="brandName" id="brandName" placeholder="Enter Brand Name" /></div>
+          </div>
+          <div class="row mb-3">
+              <label for="totalStocks" class="col-sm-2 col-form-label col-form-label-sm fw-600 fs-6">Total Stock :</label>
+            <div class="col-sm-10"><input   type="text" class="form-control" name="totalStocks" id="totalStocks" placeholder="Enter Total Stock " /></div>
+          </div>
+  
+        </div>
+  
+        <div class="variations" >
+            
+            <div class="container boxHead"><p class="fs-4">Variation Info</p></div>
+            <div class="varitationYN" id="variationYN">
+                <p class="fw-600 fs-6">Do this product have variants?</p>
+                <div class="row mb-3">
+              <div class="form-check col-sm-2" >
+                  <input class="form-check-input" type="radio" name="forVariation" id="forVariationYes" checked onclick="hideVariations(0)"   />
+                  <label class="form-check-label fw-600 fs-6" for="forVariationYes">Yes</label>
+                </div>
+                <div class="form-check col-sm-10" >
+                    <input class="form-check-input" type="radio" name="forVariation" id="forVariationNo" onclick="hideVariations(1)"/>
+                    <label class="form-check-label fw-600 fs-6" for="forVariationNo">No</label>
+                </div>
+            </div>
+          </div>
+          <div class="" id="youwannahidethis">
+
+              <div class="variantionUhh" id="outerMostDiv">
+                <div class="variationOne">
+                  <div class="row mb-3">
+                    <label for="varitaion-type" class="col-sm-2 col-form-label col-form-label-sm fw-600 fs-6">Variation Type :</label>
+                    <div class="col-sm-10"><input type="text" class="form-control" name="varitaion-type" id="varitaion-type" placeholder="Enter Variation" /></div>
+                </div>
+                  <div class="row mb-3">
+                    <label for="variation-details" class="col-sm-2 col-form-label col-form-label-sm fw-600 fs-6">Variation Details :</label>
+                    <div class="col-sm-10"><input type="text" class="form-control" name="variation-details" id="variation-details" placeholder="Enter Variation Details" /></div>
+                  </div>
+                </div>
+            </div>
+            <!-- <button class="addVariation mb-3 btn btn-outline-secondary" id="addVariation">Add More Variations</button> -->
+            <div class="container text-center">
+
+              <div class="addVariation mb-3 btn " id="addVariation" onclick="AddVariation"> + Add More Variation</div>
+            </div>
+          </div>
+        </div>
+        <div class="priceAndDiscount boxHead container">
+            <p class="fs-4 boxHead">Offer Info</p>
+            <div class="row mb-3">
+                <label for="price" class="col-sm-2 col-form-label col-form-label-sm fw-600 fs-6">Price :</label>
+                <div class="col-sm-10"><input required type="text" name="price" class="form-control" id="price" placeholder="Enter Price" /></div>
+            </div>
+            <div class="discountYN" id="discountYN">
+                <p class="fw-600 fs-6">Do you want to add discount?</p>
+                <div class="row mb-3">
+                    <div class="form-check col-sm-2">
+                        <input class="form-check-input" type="radio" name="forDiscount" id="forDiscount1" checked onclick="hideDiscount(0)" />
+                        <label class="form-check-label fw-600 fs-6" for="forDiscount1">Yes</label>
+                    </div>
+                    <div class="form-check col-sm-10">
+                        <input class="form-check-input" type="radio" name="forDiscount" id="forDiscount2" onclick="hideDiscount(1)" />
+                        <label class="form-check-label fw-600 fs-6" for="forDiscount2">No</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3" id="hideThisDiscount">
+                <label for="discount" class="fw-600 fs-hideVariations(0)6 col-sm-2 col-form-label col-form-label-sm">Discount (in%) :</label>
+            <div class="col-sm-10"><input type="text" name="discount" class="form-control" id="discount" placeholder="Enter Discount" /></div>
+        </div>
+          
+    </div>
+        <div class="boxHead otherInfo">
+          <p class=" fs-4">Other Info</p>
+            <div class="row mb-3">
+                <label for="prodDesc" class="fw-600 fs-6 col-sm-2 col-form-label col-form-label-sm">Product Description :</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" name = "prodDesc" aria-label="With textarea" id="prodDesc"></textarea>
+            </div>
+        </div> 
+    </div>
+    
+        <button type="submit" class="btn btn-warning mb-5" id="submitBtn">Upload Product</button>
+
+      </form>
+      </div>
+      <script>
+        //   Hide varaiation function
+ function hideVariations(x){
+  if(x==0){
+      document.getElementById("youwannahidethis").style.display="block";
+  }else if(x==1){
+      document.getElementById("youwannahidethis").style.display="none";
+  }
+}
+// Hide discount function
+function hideDiscount(x){
+  if(x==0){
+      document.getElementById("hideThisDiscount").style.display="block";
+  }else if(x==1){
+      document.getElementById("hideThisDiscount").style.display="none";
+  }
+}
+// Funciton to add Variation
+function AddVariation(){
+    const variationOuterDiv = document.getElementById("outerMostDiv")
+    
+    let addThisDiv = document.createElement("div");
+    addThisDiv.classList.add("variationOne");
+    addThisDiv.innerHTML = `<div class="row mb-3">
+    <label for="varitaion-type-2" class="col-sm-2 col-form-label col-form-label-sm fw-600 fs-6">Variation Type :</label>
+    <div class="col-sm-10"><input type="text" class="form-control" name="varitaion-type-2" id="varitaion-type-2" placeholder="Enter Variation" /></div>
+    </div>
+    <div class="row mb-3">
+    <label for="variation-details-2" class="col-sm-2 col-form-label col-form-label-sm fw-600 fs-6">Variation Details :</label>
+    <div class="col-sm-10"><input type="text" class="form-control" name="variation-details-2" id="variation-details-2" placeholder="Enter Variation Details" /></div>
+    </div>`
+
+variationOuterDiv.append(addThisDiv);
+}
+      </script>
+      <!-- linking local js -->
+      <script src="../js/form.js"></script>
+      <!-- linking bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

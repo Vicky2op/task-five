@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .addImgDiv {
+    background-color: #b4b4b4;
+    border: 1px dashed #b4b4b4;
+    box-sizing: border-box;
+    border-radius: 6px;
+    height: 400px;
+    width: auto;
+    cursor: pointer;
+  }
+  #centreThisDiv{
+    margin-top:23%;
+  }
+  #buttonImg{
+    background-color: #b4b4b4;
+    border-radius: 6px;
+    cursor: pointer;
+
+    width:100%;
+    border: 0;
+  }
+  .boxHead{
+    color: #17353D;
+    font-weight:700;
+    
+  }
+  
+  .boxHead .fs-4{
+    border-bottom: 4px solid #F79B34;
+    width:13%;
+    
+  }
+
+  .fw-600{
+    font-weight:600;
+  }
+  .ImageAndUpload{
+    display:flex;
+  }
+  .ImageAndUpload .addImgDiv{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #imageHere{
+    background-color: #b4b4b4;
+    border: 1px solid #17353D;
+    color: white !important;
+    display: none;
+  }
+  #submitBtn{
+    width: 100%;
+    color: white;
+
+  }
+  .mainContProds{
+    background-color: #F9F9F9;
+  }
+  .products{
+    min-height: 100vh;
+  }
+  #addVariation{
+    color: #F79B34;
+    border-bottom: 1px solid #F79B34;
+  }
+  #addVariation:hover{
+    border : 1px solid #F79B34;
+    background-color: #F79B34;
+    color: white;
+  }
+
+
+  
+.productsDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.divContainingInnerdiv {
+  margin: 0 1rem 2.5rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: white;
+  border-radius: 6px;
+  width: 25%;
+  min-width: 285px;
+  height: 400px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+  rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.shoeImg{
+  width: 90%;
+  height: 40%;
+  min-height: 250px;
+  padding-bottom: 3px;
+  border-bottom: 3px solid #17353d;
+  border-radius: 5%;
+}
+.nameAndStar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.nameAndStar strong {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17353d;
+}
+
+.nameAndStar span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fae5d3;
+  border-radius: 2px;
+  padding: 2px 3px;
+}
+
+.nameAndStar span img {
+  width: 15px;
+  height: 15px;
+}
+
+.nameAndStar span small {
+  color: #f79b34;
+}
+
+.divContainingInnerdiv h3 {
+  color: #e74c3c;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.divContainingInnerdiv h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17353d;
+  bottom:0;
+}
+.nav-item:hover{
+  border-bottom: 1px solid white !important;
+  padding-bottom:2px !important;
+}
+.addNewProdBtn:hover{
+  color: #fff;}
